@@ -1,0 +1,67 @@
+# Comments
+MODEL: R
+
+VARS:
+    XI:
+        N: 400
+        INIT: 0
+        MIN: -6.0
+        MAX: 6.0
+        TYPE: REAL
+
+ALGO: MADS
+
+#PSO_MADS:
+#    PSO_SWARM_SIZE: 50
+#    PSO_ITER_PER_SEARCH: 3
+#    PSO_MAX_NUM_SEARCH: 5
+
+NUM_OBJ: 1
+
+MAX_ITER: 200
+
+#MAX_EVAL: 3000
+
+IGNORE_SIM_ERROR: 1
+
+MODEL_PARAM:
+    TOP_DIR: '/data3/Astro/cnn_surrogate_meng/topics/channel_80x80x20_RSC/MADS-RML/'
+
+    MODEL_DIR: 'model/'
+
+    RUN_DIR: 'temp/'
+
+    OPCA_PARAM: 'pca_data/OPT_CNNOPCA_PARAM.txt'
+
+    NEURAL_MODEL: 'neural_model/bimodal_df_cond20w_sw7.5_hw10_ep3.pth'
+
+    SIMULATOR: 'simulator/nw_bhp_120by120_hm'
+
+
+BATCH_SIM : 1
+NOMAD:
+    DISPLAY_STATS: EVAL BBE (OBJ CONS_H) SOL
+    DISPLAY_ALL_EVAL: 0
+    DISPLAY_DEGREE: 0
+    STATS_FILE: hm_stats.txt EVAL BBE OBJ SOL
+    SOLUTION_FILE: hm_sln.txt
+    SEED: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
